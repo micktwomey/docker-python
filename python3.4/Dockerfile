@@ -27,3 +27,4 @@ RUN curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py > /tmp/get-pi
 RUN python3.4 /tmp/get-pip.py
 RUN pip3.4 install -U "setuptools>=3.4.1"
 RUN pip3.4 install -U "pip>=1.5.4"
+RUN pip3.4 install -U "virtualenv>=1.11.4"
