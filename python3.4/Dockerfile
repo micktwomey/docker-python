@@ -23,8 +23,8 @@ RUN apt-get update \
     && apt-get autoremove \
     && apt-get clean
 
-RUN curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py > /tmp/get-pip.py
-RUN python3.4 /tmp/get-pip.py
+ADD https://github.com/pypa/pip/raw/645180e2714b4ffcf40363a608239e089c9dafab/contrib/get-pip.py /root/get-pip.py
+RUN python3.4 /root/get-pip.py
 RUN pip3.4 install -U "setuptools>=3.4.1"
 RUN pip3.4 install -U "pip>=1.5.4"
 RUN pip3.4 install -U "virtualenv>=1.11.4"
